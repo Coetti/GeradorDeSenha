@@ -41,15 +41,18 @@ const PasswordCaller = () => {
 
     return (
       <div>
-        <h3>Senha Atual</h3>
+        <div className={styles.currentlyPassword}>
+        <h3>SENHA ATUAL</h3>
         <p>{currentPassword.password}</p>
-
-        <h3>Próximas Senhas</h3>
-        <ul>
+        </div>
+        <div className={styles.nextPasswords}>
+        <h3>PRÓXIMAS SENHAS</h3>
+        <ul className={styles.ulNextPasswords}>
           {returnedPasswords.slice(currentPasswordIndex + 1, currentPasswordIndex + 10).map((password, index) => (
-            <li key={index}>{password.password}</li>
+            <li key={index}>{password.password} </li>
           ))}
         </ul>
+        </div>
       </div>
     );
   };
