@@ -20,7 +20,7 @@ const passwordSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
-}, { collection: 'passwords' }); // Nome da coleção
+}, { collection: 'passwords' });
 
 const Password = mongoose.model('Password', passwordSchema);
 

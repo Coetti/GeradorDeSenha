@@ -48,7 +48,7 @@ const PasswordCaller = () => {
         <div className={styles.nextPasswords}>
         <h3>PRÓXIMAS SENHAS</h3>
         <ul className={styles.ulNextPasswords}>
-          {returnedPasswords.slice(currentPasswordIndex + 1, currentPasswordIndex + 10).map((password, index) => (
+          {returnedPasswords.slice(currentPasswordIndex + 1, currentPasswordIndex + 4).map((password, index) => (
             <li key={index}>{password.password} </li>
           ))}
         </ul>
