@@ -23,7 +23,9 @@ const io = new Server(server, {
   },
 });
 
-mongoose.connect('mongodb+srv://coettigabriel6:6pP5Ze68i1ruCRjk@senhas.mrzvfkx.mongodb.net/')
+const connectionString = 'sua connection string';
+
+mongoose.connect(connectionString)
   .then(() => {
     console.log('Conexão bem-sucedida com o MongoDB!');
   })
@@ -60,7 +62,7 @@ app.get('/generate-password/:type', async (req, res) => {
     console.error('Erro ao salvar a senha:', error);
     res.status(500).send('Erro ao criar e armazenar a senha');
   }
-});
+}); 
 
 app.get('/return-password', async (req, res) => {
   try {

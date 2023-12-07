@@ -3,7 +3,7 @@ import axios from 'axios';
 import io from 'socket.io-client';
 import styles from './PasswordGenerator.module.css'
 
-const socket = io('http://localhost:3001'); // Substitua pela URL do seu servidor
+const socket = io('http://localhost:3001'); 
 
 const PasswordGenerator = () => {
   const [senhaNormal, setSenhaNormal] = useState("");
